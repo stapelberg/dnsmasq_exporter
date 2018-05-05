@@ -60,6 +60,8 @@ func TestDnsmasqExporter(t *testing.T) {
 		time.Sleep(10 * time.Millisecond) // do not hog the CPU
 	}
 
+	time.Sleep(1 * time.Second)
+
 	s := &server{
 		promHandler: promhttp.Handler(),
 		dnsClient: &dns.Client{
